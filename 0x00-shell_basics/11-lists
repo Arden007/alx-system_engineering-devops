@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltra $(pwd) /boot
+ls -la $(pwd) /boot
