@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l -a -t
+ls -la /etc /bin
