@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 # Script display "Best school" x10 using while loop
 # say hi on 9th iteration
+
 i=0
 while [ $i -lt 10 ]
 do

@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 # Script display "Best school" x10
+
 i=0
 until [ $i -eq 10 ]
 do
