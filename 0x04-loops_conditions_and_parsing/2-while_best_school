@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+# Script display "Best school" x10
+i=0
+while [ $i -lt 10 ]
+do
+    echo "Best school"
+    ((i++))
+done
