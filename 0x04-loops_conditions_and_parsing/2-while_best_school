@@ -2,7 +2,7 @@
 # Script display "Best school" x10
 
 i=0;
-while [ $i -lt 10 ]
+while [ $i -le 9 ]
 do
     echo "Best school"
     i=$((i + 1))
