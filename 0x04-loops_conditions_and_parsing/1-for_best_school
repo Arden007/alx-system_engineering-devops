@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Script display "Best school" x10
 
 for((i=0; i<10; i++))
