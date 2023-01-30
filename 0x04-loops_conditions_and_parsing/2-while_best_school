@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Script display "Best school" x10
 
-x=0
-while [ $x -le 9 ]
+i=0
+while [ $i -lt 10 ]
 do
-  echo "Best school "
-  x=$(( $x + 1 ))
+    echo "Best school"
+    i=$((i + 1))
 done
