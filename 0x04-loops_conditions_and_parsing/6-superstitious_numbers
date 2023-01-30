@@ -6,16 +6,13 @@
 
 i=0
 
-while [ $i -lt 10 ]
+while [ $i -le 20 ]
 do
-  if [ $i -eq 3 ]
-  then
-    echo "bad luck"
-  elif [ $i -eq 7 ]
-  then
-    echo "good luck"
-  else
-    echo "Best School"
-  fi
+  echo "$i"
+  case $i in
+    "4") echo "bad luck from China";;
+    "9") echo "bad luck from Japan";;
+    "17") echo "bad luck from Italy";;
+  esac
   (( i++ ))
 done
