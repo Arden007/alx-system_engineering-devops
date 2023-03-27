@@ -1,0 +1,4 @@
+# Configure ssh file for local client to connect to server without password
+Host *
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
