@@ -13,23 +13,23 @@ def count_words(subreddit, word_list, found_list=[], after=None):
         found_list (obj): Key/value pairs of words/counts.
         after (str): The parameter for the next page of the API results.
     '''
+    user_agent = {'User-agent': 'test45'}
+    posts = requests.get('http://www.reddit.com/r/{}/hot.json?after={}'
+                         .format(subreddit, after), headers=user_agent)
     if after is None:
         word_list = [word.lower() for word in word_list]
 
-    url = 'http://www.reddit.com/r/{}/hot.json?after={}'
-    posts = requests.get(url.format(subreddit, after), headers={'User-agent': 'test45'})
-
     if posts.status_code == 200:
         posts = posts.json()['data']
-        param = posts['after']
+        aft = posts['after']
         posts = posts['children']
         for post in posts:
             title = post['data']['title'].lower()
             for word in title.split(' '):
                 if word in word_list:
                     found_list.append(word)
-        if param is not None:
-            count_words(subreddit, word_list, found_list, param)
+        if aft is not None:
+            count_words(subreddit, word_list, found_list, aft)
         else:
             result = {}
             for word in found_list:
