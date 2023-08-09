@@ -1,19 +1,20 @@
 #!/usr/bin/python3
 import requests
 from collections import Counter
-"""     fetches and counts occurrences of given keywords in hot article titles from a Reddit subreddit.
-"""
+""" fetches and counts occurrences of given keywords in hot article titles from a Reddit subreddit. """
 
 
 def count_words(subreddit, word_list, after=None, word_counter=None):
     """
-    Recursively fetches and counts occurrences of given keywords in hot article titles from a Reddit subreddit.
+    Recursively fetches and counts occurrences of given keywords in hot article titles from a Reddit
+    subreddit.
     
     Args:
         subreddit (str): The name of the subreddit to retrieve hot articles from.
         word_list (list): A list of keywords to count occurrences of in article titles.
         after (str, optional): The 'after' parameter for pagination. Defaults to None.
-        word_counter (collections.Counter, optional): A counter to keep track of keyword occurrences. Defaults to None.
+        word_counter (collections.Counter, optional): A counter to keep track of keyword 
+        occurrences. Defaults to None.
 
     Returns:
         None
