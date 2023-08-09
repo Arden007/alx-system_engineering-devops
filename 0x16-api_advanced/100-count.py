@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import requests
 from collections import Counter
+"""     fetches and counts occurrences of given keywords in hot article titles from a Reddit subreddit.
+"""
+
 
 def count_words(subreddit, word_list, after=None, word_counter=None):
     """
