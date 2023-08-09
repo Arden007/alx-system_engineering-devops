@@ -6,20 +6,16 @@ import requests
 # Global variable to keep track of the 'after' parameter for pagination
 after = None
 
-
 def recurse(subreddit, hot_list=[]):
     """
-    Recursively fetches and returns a list of titles of hot posts from a 
-    subreddit.
+    Recursively fetches and returns a list of titles of hot posts from a subreddit.
 
     Args:
-        subreddit (str): The name of the subreddit to retrieve hot posts 
-        from hot_list (list, optional): A list to accumulate hot post 
-        titles. Defaults to an empty list.
+        subreddit (str): The name of the subreddit to retrieve hot posts from.
+        hot_list (list, optional): A list to accumulate hot post titles. Defaults to an empty list.
 
     Returns:
-        list or None: A list containing titles of hot posts, or None if 
-        the subreddit is invalid or an error occurs.
+        list or None: A list containing titles of hot posts, or None if the subreddit is invalid or an error occurs.
     """
     global after
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
