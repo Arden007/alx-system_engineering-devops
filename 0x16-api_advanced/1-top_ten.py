@@ -2,18 +2,22 @@
 """
 Reddit Top Ten Hot Posts
 
-This script queries the Reddit API to retrieve the titles of the first 10 hot posts for a given subreddit.
+This script queries the Reddit API to retrieve the titles of the first 10
+ hot posts for a given subreddit.
 If the subreddit is not valid or does not exist, the script prints None.
 """
 
 import requests
 
+
 def top_ten(subreddit):
     """
-    Retrieve and print the titles of the first 10 hot posts for a given subreddit.
+    Retrieve and print the titles of the first 10 hot posts for a given 
+    subreddit.
 
-    This function queries the Reddit API using the '/hot.json' endpoint to obtain the titles
-    of the first 10 hot posts from the specified subreddit.
+    This function queries the Reddit API using the '/hot.json' endpoint
+    to obtain the titles of the first 10 hot posts from the specified 
+    subreddit.
 
     Args:
         subreddit (str): The name of the subreddit.
