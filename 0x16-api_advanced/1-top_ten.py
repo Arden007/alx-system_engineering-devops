@@ -1,17 +1,13 @@
 #!/usr/bin/python3
-"""
-Reddit Top Ten Hot Posts
+"""Reddit Top Ten Hot Posts"""
 
-This script queries the Reddit API to retrieve
-the titles of the first 10 hot posts for a given 
-subreddit. If the subreddit is not valid or does
-not exist, the script prints None.
-"""
+
 import requests
 
 
 def top_ten(subreddit):
-    """Retrieve and print the titles of the first 10
+    """
+    Retrieve and print the titles of the first 10
     hot posts for a given subreddit.
 
     This function queries the Reddit API using the
@@ -27,8 +23,8 @@ def top_ten(subreddit):
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {'limit': 10}
-    response = requests.get(url, headers=headers,
-                            allow_redirects=False, params=params)
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
 
     if response.status_code == 200:
         data = response.json()
