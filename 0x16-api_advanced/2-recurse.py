@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-"""Recursive function to fetch hot post titles
+"""
+Recursive function to fetch hot post titles
 from a Reddit subreddit
 """
+
 
 import requests
 
