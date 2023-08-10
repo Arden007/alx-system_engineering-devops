@@ -5,10 +5,6 @@
 import requests
 
 
-# Global variable to keep track of the 'after' parameter for pagination
-after = None
-
-
 def recurse(subreddit, hot_list=[]):
     """
     Recursively fetches and returns a list of titles of hot posts from a subreddit.
@@ -22,7 +18,9 @@ def recurse(subreddit, hot_list=[]):
         list or None: A list containing titles of hot posts, or None if the
         subreddit is invalid or an error occurs.
     """
+    # Global variable to keep track of the 'after' parameter for pagination
     global after
+    after = None
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64)'}
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     params = {'after': after}
