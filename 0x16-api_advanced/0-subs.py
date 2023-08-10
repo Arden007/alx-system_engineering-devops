@@ -3,13 +3,11 @@
 Reddit Subreddit Subscribers Count
 
 This script queries the Reddit API to retrieve the number
-of subscribers for a given subreddit.If the subreddit is
+of subscribers for a given subreddit. If the subreddit is
 not valid or does not exist, the function returns 0.
 """
 
-
 import requests
-
 
 def number_of_subscribers(subreddit):
     """
