@@ -1,21 +1,25 @@
 #!/usr/bin/python3
-"""Recursive function to fetch hot post titles from a Reddit subreddit"""
+"""Recursive function to fetch hot post titles
+from a Reddit subreddit
+"""
 
 import requests
 
 
 def recurse(subreddit, hot_list=[]):
     """
-    Recursively fetches and returns a list of titles of hot posts from a subreddit.
+    Recursively fetches and returns a list of
+    titles of hot posts from a subreddit.
 
     Args:
-        subreddit (str): The name of the subreddit to retrieve hot posts from.
-        hot_list (list, optional): A list to accumulate hot post titles.
+        subreddit (str): The name of the subreddit
+        to retrieve hot posts from.hot_list
+        (list, optional): A list to accumulate hot post titles.
         Defaults to an empty list.
 
     Returns:
-        list or None: A list containing titles of hot posts, or None if the
-        subreddit is invalid or an error occurs.
+        list or None: A list containing titles of hot posts,
+        or None if the subreddit is invalid or an error occurs.
     """
     # Global variable to keep track of the 'after' parameter for pagination
     global after
